@@ -38,12 +38,12 @@ public class WindowsTests extends TestBase {
         jsAlerts.sendMessageToAlert("Hello!").verifyMessage("Hello!");
     }
 
-//    @Test
-//    @DisplayName("Verify to 'You successfully clicked an alert' is displayed")
-//    public void alerTest() {
-//        homePage.selectAlerts();
-//        jsAlerts.selectResult("You successfully clicked an alert").verifyResult("You successfully clicked an alert");
-//    }
+    @Test
+    @DisplayName("Verify to 'You successfully clicked an alert' is displayed")
+    public void alertTest() {
+        homePage.selectAlerts();
+        jsAlerts.clickOkInAlert("You successfully clicked an alert").verifyResult("You successfully clicked an alert");
+    }
 
 
 }

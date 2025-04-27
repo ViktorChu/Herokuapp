@@ -17,7 +17,7 @@ public class HomePage extends BasePage {
 
     public JavaScriptAlertsPage selectAlerts() { // метод для входа в раздел с алертами 'JavaScript Alerts'
         click(jsAlerts); //click 'JavaScript Alerts'
-        return new JavaScriptAlertsPage(driver); // вызываем методы из класса JavaScriptAlertsPage
+        return new JavaScriptAlertsPage(driver); // вызываем методы из класса JavaScriptAlertsPage, то есть click
     }
 
 
