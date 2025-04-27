@@ -1,6 +1,8 @@
 package com.herokuapp.pages;
 
 import com.herokuapp.core.BasePage;
+import com.herokuapp.pages.windows.DropdownPage;
+import com.herokuapp.pages.windows.HoversPage;
 import com.herokuapp.pages.windows.JavaScriptAlertsPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,7 +22,21 @@ public class HomePage extends BasePage {
         return new JavaScriptAlertsPage(driver); // вызываем методы из класса JavaScriptAlertsPage, то есть click
     }
 
+    @FindBy(xpath = "//a[normalize-space(text())='Dropdown']")
+    WebElement dropdown;
 
+    public DropdownPage getDropdownList() {
+        click(dropdown);
+        return new DropdownPage(driver);
+    }
+
+    @FindBy(xpath = "//a[normalize-space(text())='Hovers']")
+    WebElement hover;
+
+    public HoversPage selectHover() {
+        clickWithJS(hover,0,100);
+        return new HoversPage(driver);
+    }
 
 
     //1:44:00 @FindBy

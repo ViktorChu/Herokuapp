@@ -1,9 +1,6 @@
 package com.herokuapp.core;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -26,17 +23,17 @@ public class BasePage {
         js.executeScript("window.scrollBy(" + x + "," + y + ")");
     }
 
-    public void clickWithJS(WebElement element, int x, int y){
-        scrollWithJS(x,y);
+    public void clickWithJS(WebElement element, int x, int y) {
+        scrollWithJS(x, y);
         click(element);
     }
 
-    public void click(WebElement element){
+    public void click(WebElement element) {
         element.click();
     }
 
-    public void type(WebElement element, String text){
-        if(text !=null){
+    public void type(WebElement element, String text) {
+        if (text != null) {
             click(element);
             element.clear();
             element.sendKeys(text);
@@ -53,10 +50,24 @@ public class BasePage {
     }
 
     public boolean isContainsText(String text, WebElement element) {
-
         return element.getText().contains(text);
     }
 
+    public void pause(int millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
-
+    public boolean isElementVisible(WebElement element) {
+        try{
+            element.isDisplayed();
+            return true;
+        }catch (NoSuchElementException exception){
+            exception.getMessage();
+            return false;
+        }
+    }
 }
