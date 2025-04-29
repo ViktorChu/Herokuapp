@@ -1,9 +1,7 @@
 package com.herokuapp.pages;
 
 import com.herokuapp.core.BasePage;
-import com.herokuapp.pages.windows.DropdownPage;
-import com.herokuapp.pages.windows.HoversPage;
-import com.herokuapp.pages.windows.JavaScriptAlertsPage;
+import com.herokuapp.pages.windows.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,8 +32,25 @@ public class HomePage extends BasePage {
     WebElement hover;
 
     public HoversPage selectHover() {
-        clickWithJS(hover,0,100);
+        clickWithJS(hover, 0, 100);
         return new HoversPage(driver);
+    }
+
+    @FindBy(xpath = "//a[normalize-space(text())='Horizontal Slider']")
+    WebElement horizontalSlider;
+
+    public HorizontalSliderPage selectHorisontalSlider() {
+        clickWithJS(horizontalSlider, 0, 100);
+        return new HorizontalSliderPage(driver);
+    }
+
+
+    @FindBy(xpath = "//a[normalize-space(text())='Context Menu']")
+    WebElement contextMenu;
+
+    public ContextMenuPage selectContextMenu() {
+        click(contextMenu);
+        return new ContextMenuPage(driver);
     }
 
 
