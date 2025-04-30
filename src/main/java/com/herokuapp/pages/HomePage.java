@@ -53,6 +53,22 @@ public class HomePage extends BasePage {
         return new ContextMenuPage(driver);
     }
 
+    @FindBy(css = "div#content>ul>li:nth-of-type(18)>a")
+    WebElement fileUpload;
+
+    public FileUploadPage selectFileUpload() {
+        click(fileUpload);
+        return new FileUploadPage(driver);
+    }
+
+    @FindBy(css = "div#content>ul>li:nth-of-type(6)>a")
+    WebElement checkBox;
+
+    public CheckboxesPage selectCheckboxesPage() {
+        click(checkBox);
+        return new CheckboxesPage(driver);
+    }
+
 
     //1:44:00 @FindBy
 }
