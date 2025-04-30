@@ -19,7 +19,8 @@ public class HoverTests extends TestBase {
     @Test
     public void selectImageTest(){
         homePage.selectHover();
-        new HoversPage(driver).selectAvatar()
+        new HoversPage(driver)
+                .selectAvatar("userAvatar3")
                 .verifyUser();
     }
 }
