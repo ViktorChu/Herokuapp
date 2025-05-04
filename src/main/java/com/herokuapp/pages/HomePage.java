@@ -69,6 +69,15 @@ public class HomePage extends BasePage {
         return new CheckboxesPage(driver);
     }
 
+    @FindBy(xpath = "//a[normalize-space(text())='Redirect Link']")
+    WebElement RedirectLink;
+
+    public RedirectLinkPage selectRedirectLinkPage() {
+        scrollWithJS(0,300);
+        click(RedirectLink);
+        return new RedirectLinkPage(driver);
+    }
+
 
     //1:44:00 @FindBy
 }
