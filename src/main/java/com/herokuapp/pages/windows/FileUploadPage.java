@@ -19,6 +19,7 @@ public class FileUploadPage extends BasePage {
 
     public FileUploadPage chooseFile(String path) {
         fileUpload.sendKeys(path);
+        pause(500);
         click(uploadButton);
         return this;
     }

@@ -13,14 +13,14 @@ public class HorizontalSliderTests extends TestBase {
 
     @BeforeEach
     public void precondition(){
-        homePage = new HomePage(driver);
-        horizontalSlider = new HorizontalSliderPage(driver);
+        homePage = new HomePage(app.driver);
+        horizontalSlider = new HorizontalSliderPage(app.driver);
     }
 
     @Test
     public void horizontalSliderTest(){
         homePage.selectHorisontalSlider();
-        new HorizontalSliderPage(driver).moveSliderToHorizontalDirection(60,0)
+        new HorizontalSliderPage(app.driver).moveSliderToHorizontalDirection(60,0)
                 .verifySliderValue("5");
     }
 }

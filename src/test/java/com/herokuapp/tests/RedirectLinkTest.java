@@ -13,8 +13,8 @@ public class RedirectLinkTest extends TestBase {
 
     @BeforeEach
     public void precondition(){
-        homePage = new HomePage(driver);
-        redirectLinkPage = new RedirectLinkPage(driver);
+        homePage = new HomePage(app.driver);
+        redirectLinkPage = new RedirectLinkPage(app.driver);
     }
 
 

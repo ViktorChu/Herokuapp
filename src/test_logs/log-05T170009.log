@@ -1,0 +1,10 @@
+17:00:11.272 [main] INFO  com.herokuapp.utils.MyListener -- Open URL - https://the-internet.herokuapp.com/
+17:00:14.568 [main] INFO  com.herokuapp.core.TestBase -- Start test fileUploadTest()
+17:00:14.656 [main] INFO  com.herokuapp.utils.MyListener -- We found element Decorated {[[ChromeDriver: chrome on windows (cb5471a5634bdefafb93e6eb777054bc)] -> css selector: div#content>ul>li:nth-of-type(18)>a]}
+17:00:14.656 [main] INFO  com.herokuapp.utils.MyListener -- We click on element [[ChromeDriver: chrome on windows (cb5471a5634bdefafb93e6eb777054bc)] -> css selector: div#content>ul>li:nth-of-type(18)>a]
+17:00:15.249 [main] INFO  com.herokuapp.utils.MyListener -- We found element Decorated {[[ChromeDriver: chrome on windows (cb5471a5634bdefafb93e6eb777054bc)] -> id: file-upload]}
+17:00:15.832 [main] INFO  com.herokuapp.utils.MyListener -- We found element Decorated {[[ChromeDriver: chrome on windows (cb5471a5634bdefafb93e6eb777054bc)] -> id: file-submit]}
+17:00:15.832 [main] INFO  com.herokuapp.utils.MyListener -- We click on element [[ChromeDriver: chrome on windows (cb5471a5634bdefafb93e6eb777054bc)] -> id: file-submit]
+17:00:16.509 [main] INFO  com.herokuapp.utils.MyListener -- We found element Decorated {[[ChromeDriver: chrome on windows (cb5471a5634bdefafb93e6eb777054bc)] -> css selector: div#content>div>h3]}
+17:00:16.681 [main] INFO  com.herokuapp.core.TestBase -- Stop test 
+17:00:16.681 [main] INFO  com.herokuapp.core.TestBase -- ===============================================================

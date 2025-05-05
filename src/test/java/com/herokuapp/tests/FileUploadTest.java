@@ -13,13 +13,14 @@ public class FileUploadTest extends TestBase {
 
     @BeforeEach
     public void precondition(){
-        homePage = new HomePage(driver);
-        fileUpload = new FileUploadPage(driver);
+        homePage = new HomePage(app.driver);
+        fileUpload = new FileUploadPage(app.driver);
     }
 
     @Test
     public void fileUploadTest(){
         homePage.selectFileUpload();
+
         fileUpload.chooseFile("E:/!Learning/!QA AIT/QA_auto/lesson_26_Selenium._Data_picker,_file_upload/fileToUpload.txt")
                   .verifyUpload("File Uploaded!")
         ;

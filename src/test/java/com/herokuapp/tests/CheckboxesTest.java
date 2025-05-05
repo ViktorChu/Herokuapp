@@ -12,12 +12,12 @@ public class CheckboxesTest extends TestBase {
 
     @BeforeEach
     public void precondition(){
-        homePage = new HomePage(driver);
-        checkboxesPage = new CheckboxesPage(driver);
+        homePage = new HomePage(app.driver);
+        checkboxesPage = new CheckboxesPage(app.driver);
     }
 
     @Test
-    public void checkboxesTest(){
+    public void checkboxesTest(){ // не законченый тест, задать вопрос Ирине
         homePage.selectCheckboxesPage();
         checkboxesPage.unmarkMarkCheckbox()
                 .verifyMark("Checkbox 1","rgb(0, 191, 255)")

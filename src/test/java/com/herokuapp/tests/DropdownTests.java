@@ -12,8 +12,8 @@ public class DropdownTests extends TestBase {
 
     @BeforeEach
     public void precondition(){
-        homePage = new HomePage(driver);
-        dropdownList = new DropdownPage(driver);
+        homePage = new HomePage(app.driver);
+        dropdownList = new DropdownPage(app.driver);
     }
 
     @Test

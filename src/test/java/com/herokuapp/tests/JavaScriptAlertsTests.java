@@ -15,8 +15,8 @@ public class JavaScriptAlertsTests extends TestBase {
 
     @BeforeEach
     public void precondition() {
-        homePage = new HomePage(driver);
-        jsAlerts = new JavaScriptAlertsPage(driver);
+        homePage = new HomePage(app.driver);
+        jsAlerts = new JavaScriptAlertsPage(app.driver);
     }
 
 //    @Test

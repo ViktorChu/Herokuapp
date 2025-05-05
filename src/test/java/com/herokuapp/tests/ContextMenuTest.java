@@ -5,7 +5,6 @@ import com.herokuapp.pages.HomePage;
 import com.herokuapp.pages.windows.ContextMenuPage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Alert;
 
 public class ContextMenuTest extends TestBase {//ElementsTest в классном проекте
 
@@ -14,8 +13,8 @@ public class ContextMenuTest extends TestBase {//ElementsTest в классно�
 
     @BeforeEach
     public void precondition(){
-        homePage = new HomePage(driver);
-        contextMenu = new ContextMenuPage(driver);
+        homePage = new HomePage(app.driver);
+        contextMenu = new ContextMenuPage(app.driver);
     }
 
     @Test

@@ -12,14 +12,14 @@ public class HoverTests extends TestBase {
 
     @BeforeEach
     public void precondition(){
-        homePage = new HomePage(driver);
-        hovers = new HoversPage(driver);
+        homePage = new HomePage(app.driver);
+        hovers = new HoversPage(app.driver);
     }
 
     @Test
     public void selectImageTest(){
         homePage.selectHover();
-        new HoversPage(driver)
+        new HoversPage(app.driver)
                 .selectAvatar("userAvatar3")
                 .verifyUser();
     }
