@@ -12,26 +12,18 @@ public class RedirectLinkTest extends TestBase {
     RedirectLinkPage redirectLinkPage;
 
     @BeforeEach
-    public void precondition(){
+    public void precondition() {
         homePage = new HomePage(app.driver);
         redirectLinkPage = new RedirectLinkPage(app.driver);
     }
 
-
     @Test
-    public void getAllLinksTest(){
-        homePage.selectRedirectLinkPage(); //переход на искомую страницу и получение списка всех существующих на этой странице ссылок
-        redirectLinkPage
-                .clickHereLink()
-                .getAllLinks();
-    }
-
-    @Test
-    public void checkBrokenLinksTest (){ //! проверка битых ссылок. ВОПРОС: нужно ди делать отдельный тест, или можно было в предыдущем тесте отдельный метод написать, ведь иначе идет повтор кода?
+    public void getAllLinksTest() {
         homePage.selectRedirectLinkPage();
-        redirectLinkPage.clickHereLink()
-                .checkBrokenLinks()
-                ;
+        redirectLinkPage
+                .clickHereLink()//переход на искомую страницу
+                .getAllLinks() //  получение списка всех существующих на этой странице ссылок
+                .checkBrokenLinks(); // проверка ссылок
     }
-
 }
+

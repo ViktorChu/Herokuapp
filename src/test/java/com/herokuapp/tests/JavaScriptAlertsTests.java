@@ -5,6 +5,7 @@ import com.herokuapp.pages.HomePage;
 import com.herokuapp.pages.windows.JavaScriptAlertsPage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class JavaScriptAlertsTests extends TestBase {
@@ -39,6 +40,7 @@ public class JavaScriptAlertsTests extends TestBase {
     }
 
     @Test
+    @Tag("tag_test")
     @DisplayName("Verify to 'You successfully clicked an alert' is displayed")
     public void alertTest() {
         homePage.selectAlerts();

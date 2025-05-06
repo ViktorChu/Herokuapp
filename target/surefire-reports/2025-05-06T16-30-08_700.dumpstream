@@ -1,0 +1,5 @@
+# Created at 2025-05-06T16:30:08.937
+Boot Manifest-JAR contains absolute paths in classpath 'E:\!Learning\!QA AIT\QA_auto\QA_Projects\Maven\HomeProject\Herokuapp\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

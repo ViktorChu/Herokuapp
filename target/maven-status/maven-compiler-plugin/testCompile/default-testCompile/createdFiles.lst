@@ -1,0 +1,9 @@
+com\herokuapp\core\TestBase.class
+com\herokuapp\tests\HoverTests.class
+com\herokuapp\tests\RedirectLinkTest.class
+com\herokuapp\tests\ContextMenuTest.class
+com\herokuapp\tests\CheckboxesTest.class
+com\herokuapp\tests\DropdownTests.class
+com\herokuapp\tests\JavaScriptAlertsTests.class
+com\herokuapp\tests\HorizontalSliderTests.class
+com\herokuapp\tests\FileUploadTest.class

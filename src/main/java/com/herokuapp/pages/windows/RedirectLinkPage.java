@@ -44,7 +44,7 @@ public class RedirectLinkPage extends BasePage { //LinksPage
     public RedirectLinkPage checkBrokenLinks() {
         for (int i = 0; i < allLinks.size(); i++) {
             WebElement element = allLinks.get(i);
-            String url = element.getDomAttribute("href");//достаем ссылку из каждого элемента массива allLinks и создаем переменную url
+            String url = element.getDomProperty("href");//достаем ссылку из каждого элемента массива allLinks и создаем переменную url
             verifyLinks(url);//метод проверки ссылки
         }
         return this;
